@@ -20,6 +20,7 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #define SIZE 100
 
+
 void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 {
 	int row, column;
@@ -33,11 +34,36 @@ void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 	}
 }
 
-void Ex5(int arr[], int m, int n){
+int  Ex5(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
-
+	int max[SIZE];
+	int x=0;
+	for(int i=0;i<=m;i++)
+	{
+		for(int j=0;j<=n;j++)
+		{
+			int temp;
+			temp=a[0][j];
+			if(a[0][j+1]<temp)
+			{
+				temp=a[0][j+1];
+					
+			}
+			max[x]=a[0][j+1];
+		}
+	}
+	int temp;
+temp=max[0];
+	for(int i=1;i<=m-1;i++)
+	{ 
+	
+		if (max[i]<temp)
+		temp=max[i];
+		
+	}
+	return temp;
 }
 
 int main(int argc, char *argv[]) {
