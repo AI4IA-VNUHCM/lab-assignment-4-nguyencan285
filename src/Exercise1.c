@@ -17,7 +17,7 @@ ______________________________________
 #define size 100
 void Ex1(int n){
 	//Your codes here
-	int n,i,j;
+	int i,j;
 	int arr[size][size];
 	n=n+1;
 	for(i=0;i<n;i++){
