@@ -39,6 +39,7 @@ void Ex5(int arr[], int m, int n){
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
 	int max[SIZE];
+	int x=0;
 	for(int i=0;i<=m;i++)
 	{
 		for(int j=0;j<=n;j++)
@@ -48,12 +49,13 @@ void Ex5(int arr[], int m, int n){
 			if(a[0][j+1]<temp)
 			{
 				temp=a[0][j+1];
-				max[j]=a[0][j+1];
+				max[x]=a[0][j+1];
+				x++;
 			}
 		}
 	}
 	int temp;
-	for(int i=0;i<n-1;i++)
+	for(int i=0;i<=x;i++)
 	{ 
 	temp=max[i];
 		if (max[i]<max[i+1])
