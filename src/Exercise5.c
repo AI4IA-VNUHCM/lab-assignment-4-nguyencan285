@@ -55,11 +55,12 @@ void Ex5(int arr[], int m, int n){
 		}
 	}
 	int temp;
-	for(int i=0;i<=m-1;i++)
+temp=max[0];
+	for(int i=1;i<=m-1;i++)
 	{ 
-	temp=max[i];
-		if (max[i]<max[i+1])
-		temp=max[i+1];
+	
+		if (max[i]<temp)
+		temp=max[i];
 		
 	}
 	printf("%d",temp);
