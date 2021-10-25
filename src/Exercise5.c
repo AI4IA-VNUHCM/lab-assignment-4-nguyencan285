@@ -34,7 +34,7 @@ void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 	}
 }
 
-void Ex5(int arr[], int m, int n){
+int  Ex5(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
@@ -63,7 +63,7 @@ temp=max[0];
 		temp=max[i];
 		
 	}
-	printf("%d",temp);
+	return temp;
 }
 
 int main(int argc, char *argv[]) {
