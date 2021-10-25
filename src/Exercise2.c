@@ -48,7 +48,7 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 		printf("\n");
 	}
 }
-void incre(int arr[],int m,int n)
+void incre(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
 	for (i=0;i<=n-1;i++)
@@ -58,17 +58,17 @@ void incre(int arr[],int m,int n)
 			if( j % 2==0)
 			{
 				int temp;
-				if(arr[i,j]<arr[i+1,j])
+				if(a[i][j]<a[i+1][j])
 				{
-					temp=arr[i,j];
-					arr[i,j]=arr[i+1,j];
-					arr[i+1,j]=temp;
+					temp=a[i][j];
+					a[i][j]=a[i+1][j];
+					a[i+1][j]=temp;
 				}
 			}
 		}
 	}
 }
-void decre(int arr[],int m,int n)
+void decre(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
 	for (i=0;i<=n-1;i++)
@@ -78,11 +78,11 @@ void decre(int arr[],int m,int n)
 			if( j % 2!=0)
 			{
 				int temp;
-				if(arr[i,j]>arr[i+1,j])
+				if(a[i][j]>a[i+1][j])
 				{
-					temp=arr[i,j];
-					arr[i,j]=arr[i+1,j];
-					arr[i+1,j]=temp;
+					temp=a[i][j];
+					a[i][j]=a[i+1][j];
+					a[i+1][j]=temp;
 				}
 			}
 		}
@@ -92,8 +92,8 @@ void Ex2(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
-incre(arr,m,n);
-decre(arr,m,n);
+incre(a,m,n);
+decre(a,m,n);
 	printArray(a, m, n);
 }
 
