@@ -21,7 +21,7 @@ void Ex1(int n){
 	int arr[size][size];
 	n=n+1;
 	for(i=0;i<n;i++){
-		for(j=0;i<i;j++){
+		for(j=0;j<=i;j++){
 			if(j==0||j==i)
 			arr[i][j]=1;
 			else

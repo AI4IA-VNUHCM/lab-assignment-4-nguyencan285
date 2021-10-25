@@ -20,13 +20,28 @@ ________________________________________________________________________________
 #include <stdlib.h>
 #define SIZE 100
 
-void check(int a[SIZE][SIZE],int m,int n)
-{ 
-	int i,j;
+
+void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
+{
+	int row, column;
+	int counter = 0;
+	//Convert 1D array to 2D array
+	for (row = 0; row <= (m - 1); row ++){
+		for (column = 0; column <= (n - 1); column ++){
+			a[row][column] = arr[counter];
+			counter++;
+		}
+	}
+}
+
+void Ex5(int arr[], int m, int n){
+	int a[SIZE][SIZE];
+	Array2Dconverter(arr,a,m,n);
+	//Your codes here
 	int max[SIZE];
-	for(i=0;i<=m;i++)
+	for(int i=0;i<=m;i++)
 	{
-		for(j=0;j<=n;j++)
+		for(int j=0;j<=n;j++)
 		{
 			int temp;
 			temp=a[0][j];
@@ -46,28 +61,6 @@ void check(int a[SIZE][SIZE],int m,int n)
 		
 	}
 	printf("%d",temp);
-}
-void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
-{
-	int row, column;
-	int counter = 0;
-	//Convert 1D array to 2D array
-	for (row = 0; row <= (m - 1); row ++){
-		for (column = 0; column <= (n - 1); column ++){
-			a[row][column] = arr[counter];
-			counter++;
-		}
-	}
-}
-
-void Ex5(int arr[], int m, int n){
-	int a[SIZE][SIZE];
-	Array2Dconverter(arr,a,m,n);
-	//Your codes here
-	check(a,n,n);
-	
-	
-
 }
 
 int main(int argc, char *argv[]) {
