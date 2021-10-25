@@ -57,12 +57,14 @@ void down(int a[SIZE][SIZE],int m,int n)
 		{
 			if( j % 2==0)
 			{
+				for(i=0;i<=m-1;i++){
 				int temp;
 				if(a[i][j]<a[i+1][j])
 				{
 					temp=a[i][j];
 					a[i][j]=a[i+1][j];
 					a[i+1][j]=temp;
+				}
 				}
 			}
 		}
@@ -76,6 +78,7 @@ void up(int a[SIZE][SIZE],int m,int n)
 		for (i=0;i<=m-1;i++)
 		{
 			if( j % 2!=0)
+			{ for(i=0;i<=m-1;i++)
 			{
 				int temp;
 				if(a[i][j]>a[i+1][j])
@@ -84,6 +87,7 @@ void up(int a[SIZE][SIZE],int m,int n)
 					a[i][j]=a[i+1][j];
 					a[i+1][j]=temp;
 				}
+			}
 			}
 		}
 	}
