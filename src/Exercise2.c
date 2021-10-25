@@ -22,7 +22,7 @@ ________________________________________________________________________________
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 100
+#define SIZE 200
 
 void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 {
@@ -51,11 +51,11 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 void down(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
-	for (j=0;j<n;j++)
+	for (j=0;j<=n;j++)
 	{ 
 		if( j % 2==0)
 		{
-			for (i=0;i<m;i++)
+			for (i=0;i<=m;i++)
 			{
 				
 				int temp;
@@ -78,7 +78,7 @@ void up(int a[SIZE][SIZE],int m,int n)
 	{
 		if( j % 2!=0)
 		{
-			for (i=0;i<m;i++)
+			for (i=0;i<=m;i++)
 			{ 
 
 				int temp;

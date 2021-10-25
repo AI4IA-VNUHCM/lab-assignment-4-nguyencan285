@@ -49,13 +49,13 @@ void Ex5(int arr[], int m, int n){
 			if(a[0][j+1]<temp)
 			{
 				temp=a[0][j+1];
-				max[x]=a[0][j+1];
-				x++;
+					
 			}
+			max[x]=a[0][j+1];
 		}
 	}
 	int temp;
-	for(int i=0;i<=x;i++)
+	for(int i=0;i<=m-1;i++)
 	{ 
 	temp=max[i];
 		if (max[i]<max[i+1])
