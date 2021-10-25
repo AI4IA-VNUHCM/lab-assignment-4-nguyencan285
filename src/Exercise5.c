@@ -19,7 +19,24 @@ ________________________________________________________________________________
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 100
-
+int max[SIZE];
+void check(int a[SIZE][SIZE],int m,int n)
+{ 
+	int i,j;
+	for(i=0;i<=m;i++)
+	{
+		for(j=0;j<=n;j++)
+		{
+			int temp;
+			temp=a[0][j];
+			if(a[0][j+1]>temp)
+			{
+				temp=a[0][j+1];
+				max[j]=a[0][j+1];
+			}
+		}
+	}
+}
 void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 {
 	int row, column;
@@ -37,6 +54,16 @@ void Ex5(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
+	check(a,n,n);
+	int temp;
+	for(int i=0;i<n-1;i++)
+	{ 
+	temp=max[i];
+		if (max[i]<max[i+1])
+		temp=max[i+1];
+		
+	}
+	printf("%d",temp);
 
 }
 

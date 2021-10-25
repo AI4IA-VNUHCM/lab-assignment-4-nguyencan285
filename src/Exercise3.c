@@ -22,6 +22,7 @@ _________________________________________________________________
 #include <stdlib.h>
 #define SIZE 100
 
+
 void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 {
 	int row, column;
@@ -51,6 +52,7 @@ void Ex3(int in_arr[], int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(in_arr,a,n,n);
 	//Your codes here
+	
 	
 	printArray(a,n,n);
 }
