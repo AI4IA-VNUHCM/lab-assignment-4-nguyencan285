@@ -26,7 +26,7 @@ void Ex1(int n){
 			arr[i][j]=1;
 			else
 			arr[i][j]=arr[i-1][j-1]+arr[i-1][j];
-			printf("%d",arr[i][j]);
+			printf("%d ",arr[i][j]);
 		}
 	printf("\n");
 	}
