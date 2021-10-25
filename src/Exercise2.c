@@ -48,7 +48,7 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 		printf("\n");
 	}
 }
-void incre(int a[SIZE][SIZE],int m,int n)
+void down(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
 	for (i=0;i<=m-1;i++)
@@ -68,10 +68,10 @@ void incre(int a[SIZE][SIZE],int m,int n)
 		}
 	}
 }
-void decre(int a[SIZE][SIZE],int m,int n)
+void up(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
-	for (i=0;i<m-1;i++)
+	for (i=0;i<=m-1;i++)
 	{
 		for (j=0;j<=n-1;j++)
 		{
@@ -92,8 +92,8 @@ void Ex2(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
-incre(a,m,n);
-decre(a,m,n);
+down(a,m,n);
+up(a,m,n);
 	printArray(a, m, n);
 }
 
