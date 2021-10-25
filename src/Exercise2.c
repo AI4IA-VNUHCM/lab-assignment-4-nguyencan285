@@ -51,13 +51,13 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 void down(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
-	for (j=0;j<=n-1;j++)
+	for (j=0;j<n;j++)
 	{
-		for (i=0;i<=m-1;i++)
+		for (i=0;i<m;i++)
 		{
 			if( j % 2==0)
 			{
-				for(i=0;i<=m-1;i++){
+				for(i=0;i<m;i++){
 				int temp;
 				if(a[i][j]<a[i+1][j])
 				{
@@ -73,12 +73,12 @@ void down(int a[SIZE][SIZE],int m,int n)
 void up(int a[SIZE][SIZE],int m,int n)
 {
 	int i,j;
-	for (j=0;j<=n-1;j++)
+	for (j=0;j<=n;j++)
 	{
-		for (i=0;i<=m-1;i++)
+		for (i=0;i<m;i++)
 		{
 			if( j % 2!=0)
-			{ for(i=0;i<=m-1;i++)
+			{ for(i=0;i<=m;i++)
 			{
 				int temp;
 				if(a[i][j]>a[i+1][j])
