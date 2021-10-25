@@ -15,11 +15,19 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 #define size 100
-void Ex1(int n){
+//void Ex1(int n){
 	//Your codes here
-	int i,j;
+	
+    
+//}
+
+int main(int argc, char *argv[]) {
+	//testing variable, applying it to your algorithm for auto-evaluating
+	int testcase = atoi(argv[1]);
+	
+int i,j;
 	int arr[size][size];
-	n=n+1;
+	testcase= testcase +1;
 	for(i=0;i<n;i++){
 		for(j=0;i<i;j++){
 			if(j==0||j==i)
@@ -30,13 +38,8 @@ void Ex1(int n){
 		}
 	printf("\n");
 	}
-    
-}
+	   
 
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	int testcase = atoi(argv[1]);
-	
-	Ex1(testcase);
+	//Ex1(testcase);
 	return 0;
 }
